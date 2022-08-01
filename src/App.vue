@@ -5,10 +5,18 @@ const locale = zhCn;
 </script>
 
 <template>
-  <div class="m-5">
+  <div class="app">
     <el-config-provider :locale="locale">
       <router-view></router-view>
     </el-config-provider>
   </div>
-  <TheFooter></TheFooter>
 </template>
+
+<style lang="scss" scoped>
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #11151b;
+  overflow: hidden;
+}
+</style>

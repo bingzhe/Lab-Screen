@@ -6,6 +6,7 @@ import router from '@/router/index';
 // pinia
 import store from '@/store';
 import App from './App.vue';
+import 'uno.css';
 
 import 'virtual:windi.css';
 // Devtools: https://windicss.org/integrations/vite.html#design-in-devtools

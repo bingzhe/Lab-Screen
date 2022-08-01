@@ -4,6 +4,15 @@ import { RouteRecordRaw } from 'vue-router';
 const asyncRoutes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    name: 'dashboard',
+    meta: {
+      title: '',
+      icon: '',
+    },
+    component: () => import('@/views/dashboard/index.vue'),
+  },
+  {
+    path: '/home',
     name: 'home',
     meta: {
       title: '',
