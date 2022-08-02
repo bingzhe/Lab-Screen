@@ -4,7 +4,9 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
     EnProcess: typeof import('./components/EnProcess.md')['default']
     TheFooter: typeof import('./components/TheFooter.vue')['default']
     ZhProcess: typeof import('./components/ZhProcess.md')['default']

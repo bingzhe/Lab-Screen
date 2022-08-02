@@ -2,13 +2,39 @@
   <div>
     <div class="box-wrapper">
       <BorderBox11 title="门禁监测">
-        <div class="box-content"></div>
+        <div class="box-content flex w100% h100% items-center p40px">
+          <div class="flex flex-col items-center justify-center h100% pr10px pt30px">
+            <img class="w30px h30px" src="../../../../assets/images/door1.png" />
+            <span class="white">开关级状态</span>
+            <el-switch :value="true"></el-switch>
+          </div>
+          <div class="flex flex-col items-center justify-center h100% pr10px pt30px">
+            <img class="w30px h30px" src="../../../../assets/images/door2.png" />
+            <span>开关级状态</span>
+            <el-switch :value="true"></el-switch>
+          </div>
+          <div class="flex flex-col items-center justify-center h100% pr10px pt30px">
+            <img class="w30px h30px" src="../../../../assets/images/door1.png" />
+            <span class="white">开关级状态</span>
+            <el-switch :value="true"></el-switch>
+          </div>
+          <div class="flex flex-col items-center justify-center h100% pr10px pt30px">
+            <img class="w30px h30px" src="../../../../assets/images/door2.png" />
+            <span>开关级状态</span>
+            <el-switch :value="true"></el-switch>
+          </div>
+        </div>
       </BorderBox11>
     </div>
 
     <div class="box-wrapper">
       <BorderBox11 title="消防监测">
-        <div class="box-content"></div>
+        <div class="box-content flex w100% h100% justify-between items-center p40px pt80px">
+          <WaterLevelPond :config="{ data: [66], shape: 'roundRect' }" class="w80px h120px" />
+          <WaterLevelPond :config="{ data: [44], shape: 'roundRect' }" class="w80px h120px" />
+          <WaterLevelPond :config="{ data: [55], shape: 'roundRect' }" class="w80px h120px" />
+          <WaterLevelPond :config="{ data: [22], shape: 'roundRect' }" class="w80px h120px" />
+        </div>
       </BorderBox11>
     </div>
 
@@ -23,7 +49,7 @@
 </template>
 
 <script setup lang="ts">
-import { BorderBox11 } from '@kjgl77/datav-vue3';
+import { BorderBox11, WaterLevelPond } from '@kjgl77/datav-vue3';
 import WarningTable from './warningTable.vue';
 </script>
 
@@ -33,6 +59,8 @@ import WarningTable from './warningTable.vue';
   height: 200px;
 
   .box-content {
+    color: #fff;
+    box-sizing: border-box;
   }
 }
 
