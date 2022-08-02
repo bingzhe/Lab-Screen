@@ -1,7 +1,7 @@
 {
   "name": "vitecamp",
   "version": "0.0.0",
-  "author": "菜猫子neko",
+  "author": "",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
@@ -16,7 +16,6 @@
     "axios": "^0.25.0",
     "echarts": "^5.3.3",
     "element-plus": "^2.0.1",
-    "lodash-es": "^4.17.21",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.9",
     "prism-theme-vars": "^0.2.2",

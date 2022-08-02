@@ -27,7 +27,6 @@ specifiers:
   eslint-plugin-vue: ^8.3.0
   husky: ^7.0.4
   lint-staged: ^12.3.2
-  lodash-es: ^4.17.21
   markdown-it-link-attributes: ^4.0.0
   markdown-it-prism: ^2.2.2
   nprogress: ^0.2.0
@@ -56,7 +55,6 @@ dependencies:
   axios: 0.25.0
   echarts: 5.3.3
   element-plus: 2.2.11_vue@3.2.37
-  lodash-es: 4.17.21
   nprogress: 0.2.0
   pinia: 2.0.17_j6bzmzd4ujpabbp5objtwxyjp4
   prism-theme-vars: 0.2.4

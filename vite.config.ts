@@ -10,6 +10,7 @@ export default defineConfig((env) => {
 
   return {
     base: viteEnv.VITE_BASE,
+    assetsInclude: ['**/*.mov'],
     // 插件
     plugins: [
       presets(env),

@@ -3,7 +3,9 @@ import echarts from '@/components/echarts';
 
 const ChartLine = defineComponent({
   name: 'TrafficTools',
-  components: [echarts],
+  components: {
+    echarts,
+  },
   setup() {
     const className = 'trafficTools';
     const width = '100%';
