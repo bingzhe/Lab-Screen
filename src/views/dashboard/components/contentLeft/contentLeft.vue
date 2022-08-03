@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="box-wrapper">
+    <div class="h230px pl20px pr20px">
       <BorderBox11 title="门禁监测">
         <div class="box-content flex w100% h100% items-center p40px">
           <div class="flex flex-col items-center justify-center h100% pr10px pt30px">
@@ -27,7 +27,7 @@
       </BorderBox11>
     </div>
 
-    <div class="box-wrapper">
+    <div class="h250px pl20px pr20px">
       <BorderBox11 title="消防监测">
         <div class="box-content flex w100% h100% justify-between items-center p40px pt80px">
           <WaterLevelPond :config="{ data: [66], shape: 'roundRect' }" class="w80px h120px" />
@@ -57,11 +57,11 @@ import WarningTable from './warningTable.vue';
 .box-wrapper {
   padding: 0 20px;
   height: 200px;
+}
 
-  .box-content {
-    color: #fff;
-    box-sizing: border-box;
-  }
+.box-content {
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .warning-wrapper {
