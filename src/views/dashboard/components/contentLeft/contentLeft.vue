@@ -66,7 +66,7 @@ import WarningTable from './warningTable.vue';
 
 .warning-wrapper {
   padding: 0 20px;
-  height: 400px;
+  height: 300px;
 
   .warning-content {
     padding: 75px 20px 20px;

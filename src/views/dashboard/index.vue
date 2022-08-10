@@ -3,6 +3,16 @@
     <div class="bigScreen">
       <HeaderTab />
       <div class="content">
+        <div class="lab-wrapper">
+          <div class="lab-item active">实验室一</div>
+          <div class="lab-item">实验室二</div>
+          <div class="lab-item">实验室三</div>
+          <div class="lab-item">实验室四</div>
+          <div class="lab-item">实验室五</div>
+          <div class="lab-item">实验室六</div>
+          <div class="lab-item">实验室七</div>
+          <div class="lab-item">实验室八</div>
+        </div>
         <ContentLeft class="contentLeft"></ContentLeft>
         <ContentCenter class="contentCenter"></ContentCenter>
         <ContentRight class="contentRight"></ContentRight>
@@ -51,14 +61,34 @@ onMounted(() => {
       justify-content: space-between;
       height: 90%;
       padding: 10px;
+      .lab-wrapper {
+        width: 8%;
+        padding: 30px 0 0 35px;
+
+        .lab-item {
+          background-image: url('@/assets/images/box.png');
+          background-size: cover;
+          font-size: 20px;
+          color: #a5ccf2;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          margin-bottom: 20px;
+          cursor: pointer;
+
+          &.active {
+            color: #ffb116;
+          }
+        }
+      }
       .contentLeft {
-        width: 28%;
+        width: 26%;
       }
       .contentCenter {
-        width: 42%;
+        width: 40%;
       }
       .contentRight {
-        width: 28%;
+        width: 26%;
       }
     }
   }
