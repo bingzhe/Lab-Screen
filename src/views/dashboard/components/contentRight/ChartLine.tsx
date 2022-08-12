@@ -13,26 +13,9 @@ const ChartLine = defineComponent({
     const option = {
       tooltip: {
         trigger: 'axis',
-        axisPointer: {
-          lineStyle: {
-            color: '#fff',
-          },
-        },
-      },
-      legend: {
-        icon: 'rect',
-        itemWidth: 8,
-        itemHeight: 8,
-        itemGap: 20,
-        left: '10%',
-        data: ['压力一', '压力二', '压力三'],
-
-        textStyle: {
-          fontSize: 17,
-          color: '#F1F1F3',
-        },
       },
       grid: {
+        top: '8%',
         left: '3%',
         right: '4%',
         bottom: '3%',
@@ -41,126 +24,35 @@ const ChartLine = defineComponent({
       xAxis: [
         {
           type: 'category',
-          boundaryGap: false,
-          data: ['2012', '2014', '2016', '2018', '2020'],
+          data: ['N2', 'AR', 'CO2', 'H2', 'NH3', 'C12', 'NH3', 'C12'],
           axisLine: {
             lineStyle: {
-              color: '#fff',
+              color: '#a5ccf2',
             },
-          },
-          axisLabel: {
-            margin: 10,
-            fontSize: 14,
           },
         },
       ],
       yAxis: [
         {
           type: 'value',
-          max: 1500,
           axisLine: {
             lineStyle: {
-              color: '#fff',
-            },
-          },
-          axisLabel: {
-            margin: 10,
-            fontSize: 14,
-          },
-          splitLine: {
-            lineStyle: {
-              color: '#fff',
+              color: '#a5ccf2',
             },
           },
         },
       ],
       series: [
         {
-          name: '压力一',
-          type: 'line',
+          type: 'bar',
           smooth: true,
-          areaStyle: {
-            color: {
-              type: 'linear',
-              x: 0,
-              y: 0,
-              x2: 0,
-              y2: 1,
-              colorStops: [
-                {
-                  offset: 0,
-                  color: 'rgba(240, 2, 0,1)', // 0% 处的颜色
-                },
-                {
-                  offset: 1,
-                  color: 'rgba(240, 2, 0,.1)', // 100% 处的颜色
-                },
-              ],
-              global: false, // 缺省为 false
+          colorBy: 'data',
+          axisLine: {
+            lineStyle: {
+              color: '#fff',
             },
           },
-          itemStyle: {
-            color: 'rgb(240, 2, 0)',
-          },
-          data: [800, 1200, 900, 300, 800],
-        },
-        {
-          name: '压力二',
-          type: 'line',
-          smooth: true,
-          areaStyle: {
-            color: {
-              type: 'linear',
-              x: 0,
-              y: 0,
-              x2: 0,
-              y2: 1,
-              colorStops: [
-                {
-                  offset: 0,
-                  color: 'rgba(0, 204, 235,1)', // 0% 处的颜色
-                },
-                {
-                  offset: 1,
-                  color: 'rgba(0, 204, 235,.1)', // 100% 处的颜色
-                },
-              ],
-              global: false, // 缺省为 false
-            },
-          },
-          itemStyle: {
-            color: 'rgb(0, 204, 235)',
-          },
-          data: [1190, 400, 1100, 800, 900],
-        },
-        {
-          name: '压力三',
-          type: 'line',
-          smooth: true,
-          areaStyle: {
-            color: {
-              type: 'linear',
-              x: 0,
-              y: 0,
-              x2: 0,
-              y2: 1,
-              colorStops: [
-                {
-                  offset: 0,
-                  color: 'rgba(211, 187, 74,1)', // 0% 处的颜色
-                },
-                {
-                  offset: 1,
-                  color: 'rgba(211, 187, 74,.1)', // 100% 处的颜色
-                },
-              ],
-              global: false, // 缺省为 false
-            },
-          },
-          itemStyle: {
-            color: 'rgb(211, 187, 74)',
-          },
-          data: [1200, 500, 910, 1200, 500],
+          data: [800, 1200, 900, 300, 800, 200, 300, 400],
         },
       ],
     };

@@ -6,10 +6,13 @@
       @mouseover="mouseoverHandler"
       @click="clickHandler"
     />
+    <div class="more-btn" @click="handleMoreClick">更多</div>
   </div>
 </template>
 <script lang="ts" setup>
 import { ScrollBoard } from '@kjgl77/datav-vue3';
+
+const emits = defineEmits(['more-click']);
 
 const config = reactive({
   header: ['告警时间', '告警详情'],
@@ -38,11 +41,23 @@ const mouseoverHandler = (e: any) => {
 const clickHandler = (e: any) => {
   console.log(e);
 };
+
+const handleMoreClick = () => {
+  emits('more-click');
+};
 </script>
 
 <style lang="scss" scoped>
 ::v-deep(.header) {
   background-color: #254c87 !important;
+}
+
+.more-btn {
+  margin: 8px 0;
+  text-align: right;
+  font-size: 14px;
+  color: #a5ccf2;
+  cursor: pointer;
 }
 
 // ::v-deep(span.index) {

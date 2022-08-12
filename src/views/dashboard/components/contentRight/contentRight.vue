@@ -2,7 +2,7 @@
   <div class="container">
     <div class="h360px w100%">
       <div class="chartline-title-wrapper">
-        <Decoration7><div class="title-text">气体压力监控</div></Decoration7>
+        <Decoration7><div class="title-text">气瓶间实时压力</div></Decoration7>
       </div>
       <div class="chartline-wrapper">
         <BorderBox13>
@@ -13,12 +13,13 @@
 
     <div class="h400px w100%">
       <div class="chartline-title-wrapper">
-        <Decoration7><div class="title-text">实验室信息展示</div></Decoration7>
+        <Decoration7><div class="title-text">气体总阀门</div></Decoration7>
       </div>
       <div class="scroll-table-wrapper">
         <BorderBox13>
           <!-- <ChartLine class="chartline h300px"></ChartLine> -->
-          <ScrollTable class="scroll-table" />
+          <!-- <ScrollTable class="scroll-table" /> -->
+          <SwichList />
         </BorderBox13>
       </div>
     </div>
@@ -35,6 +36,7 @@
 import { Decoration7, BorderBox13, Decoration9 } from '@kjgl77/datav-vue3';
 import ChartLine from './ChartLine';
 import ScrollTable from './ScrollTable.vue';
+import SwichList from './SwichList.vue';
 </script>
 
 <style lang="scss" scoped>
