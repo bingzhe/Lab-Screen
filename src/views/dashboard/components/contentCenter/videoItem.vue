@@ -2,8 +2,8 @@
   <div>
     <BorderBox8>
       <div class="video-wrapper" padding="10px">
-        <video autoplay="true" loop="true" class="video_around video_around_chose" title="循环监控01">
-          <source class="video" title="主监控位" src="../../../../assets/video/test_mv02.mov" />
+        <video muted autoplay="true" loop="true" class="video_around video_around_chose" title="循环监控01">
+          <source class="video" title="主监控位" src="../../../../assets/video/1.mp4" />
         </video>
       </div>
     </BorderBox8>

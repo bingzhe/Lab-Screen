@@ -1,46 +1,44 @@
 <template>
-  <el-table :data="tableData" size="small">
-    <el-table-column label="实验室一">
-      <el-table-column prop="N2" label="气体种类" />
-      <el-table-column prop="AR" label="用气点1" />
-      <el-table-column prop="CO2" label="用气点2" />
-      <el-table-column prop="H2" label="用气点3" />
-      <el-table-column prop="NH3" label="用气点4" />
-      <el-table-column prop="C12" label="C12" />
+  <el-table class="custome-table" :data="tableData" size="small">
+    <el-table-column :label="title" align="center">
+      <el-table-column prop="type" label="气体种类" align="center" />
+      <el-table-column prop="q1" label="用气点1" align="center">
+        <template #default="scope">
+          <div :style="{ background: scope.row.q1 > 10 ? 'red' : '' }">{{ scope.row.q1 }}</div>
+        </template>
+      </el-table-column>
+      <el-table-column prop="q2" label="用气点2" align="center">
+        <template #default="scope">
+          <div :style="{ background: scope.row.q2 > 10 ? 'red' : '' }">{{ scope.row.q2 }}</div>
+        </template>
+      </el-table-column>
+      <el-table-column prop="q3" label="用气点3" align="center">
+        <template #default="scope">
+          <div :style="{ background: scope.row.q3 > 10 ? 'red' : '' }">{{ scope.row.q3 }}</div>
+        </template>
+      </el-table-column>
+      <!-- <el-table-column prop="NH3" label="用气点4" align="center" /> -->
     </el-table-column>
   </el-table>
 </template>
 <script lang="ts" setup>
+const prop = defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
+});
+
 const emits = defineEmits(['more-click']);
 
 const tableData = [
-  { N2: 'N2', AR: '20', CO2: '59', H2: '1', NH3: '2', C12: '3' },
-  { N2: 'AR', AR: '20', CO2: '30', H2: '44', NH3: '1', C12: '2' },
-  { N2: 'CO2', AR: '20', CO2: '30', H2: '44', NH3: '1', C12: '2' },
-  { N2: 'H2', AR: '20', CO2: '30', H2: '44', NH3: '1', C12: '2' },
-  { N2: 'NH3', AR: '20', CO2: '30', H2: '44', NH3: '1', C12: '2' },
-  { N2: 'C12', AR: '20', CO2: '30', H2: '44', NH3: '1', C12: '2' },
+  { type: 'N2', q1: '1', q2: '13', q3: '2' },
+  { type: 'AR', q1: '3', q2: '2', q3: '1' },
+  { type: 'CO2', q1: '4', q2: '2', q3: '15' },
+  { type: 'H2', q1: '5', q2: '3', q3: '3' },
+  { type: 'NH3', q1: '2', q2: '4', q3: '4' },
+  { type: 'C12', q1: '12', q2: '5', q3: '5' },
 ];
-
-const config = reactive({
-  header: ['告警时间', '告警详情'],
-  data: [
-    ['2011-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-    ['2022-8-17 00:17:56', '告警详情'],
-  ],
-  index: true,
-  columnWidth: [50],
-  align: ['center'],
-  rowNum: 3,
-});
 
 const mouseoverHandler = (e: any) => {
   console.log(e);
@@ -71,4 +69,28 @@ const handleMoreClick = () => {
 // ::v-deep(span.index) {
 //   background-color: #254c87 !important;
 // }
+
+// .custome-table {
+//   background: transparent !important;
+// }
+.custome-table.el-table {
+  --el-table-border: 1px solid #409eff;
+  --el-table-header-bg-color: transparent;
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-fill-color-light: transparent;
+  --el-table-text-color: #a5ccf2;
+  --el-table-border-color: #409eff;
+  --el-table-header-text-color: #a5ccf2;
+}
+</style>
+
+<style lang="scss">
+.custome-table.el-table--small .el-table__cell {
+  padding: 0;
+}
+.custome-table.el-table--small .cell {
+  padding: 0;
+  line-height: 28px;
+}
 </style>
