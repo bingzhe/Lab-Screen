@@ -1,6 +1,10 @@
 <template>
   <div>
-    <img class="w100% h550px pt30px" src="../../../../assets/images/lab.png" />
+    <div class="relative">
+      <img class="w100% h550px pt30px" src="../../../../assets/images/lab.png" />
+
+      <dot class="absolute top-150px left-160px cursor-pointer" @click="handleDotClick" />
+    </div>
 
     <div class="flex pt30px pb30px">
       <videoItem class="w33.3%" />
@@ -19,12 +23,23 @@
         <BorderBox8 class="lab-name-item">实验室03</BorderBox8>
       </div>
     </div>
+
+    <imagePreview ref="imagePreviewRef" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Decoration11, BorderBox8 } from '@kjgl77/datav-vue3';
+import { ref } from 'vue';
+import { BorderBox8 } from '@kjgl77/datav-vue3';
 import videoItem from './videoItem.vue';
+import dot from './dot.vue';
+import imagePreview from './imagePreview.vue';
+
+const imagePreviewRef = ref(null);
+
+const handleDotClick = () => {
+  (imagePreviewRef.value as any).open();
+};
 </script>
 
 <style lang="scss" scoped>
