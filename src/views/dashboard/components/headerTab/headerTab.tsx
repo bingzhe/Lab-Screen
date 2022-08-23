@@ -7,7 +7,7 @@ const headerTab = defineComponent({
     return () => {
       return (
         <div class="headerTab">
-          <p>实验室安全平台</p>
+          <p>实验室安全与服务平台</p>
         </div>
       );
     };

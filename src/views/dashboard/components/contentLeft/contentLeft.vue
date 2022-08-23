@@ -62,6 +62,8 @@
         </div>
       </BorderBox11>
     </div>
+
+    <tableModal ref="tableModalRef" />
   </div>
 </template>
 
@@ -70,11 +72,15 @@ import { BorderBox11, WaterLevelPond } from '@kjgl77/datav-vue3';
 import { ref, onMounted } from 'vue';
 import WarningTable from './warningTable.vue';
 import gasTable from './gasTable.vue';
+import tableModal from './tableModal.vue';
+
+const tableModalRef = ref(null);
 
 const showWaterLevelPond = ref(false);
 
 const handleMoreClick = () => {
   console.log('more click');
+  (tableModalRef.value as any).open();
 };
 
 onMounted(() => {

@@ -14,13 +14,13 @@
 
     <div class="flex justify-between">
       <div class="w33.3% flex justify-center">
-        <BorderBox8 class="lab-name-item">实验室01</BorderBox8>
+        <BorderBox10 class="lab-name-item">实验室01</BorderBox10>
       </div>
       <div class="w33.3% flex justify-center">
-        <BorderBox8 class="lab-name-item">实验室02</BorderBox8>
+        <BorderBox10 class="lab-name-item">实验室02</BorderBox10>
       </div>
       <div class="w33.3% flex justify-center">
-        <BorderBox8 class="lab-name-item">实验室03</BorderBox8>
+        <BorderBox10 class="lab-name-item">实验室03</BorderBox10>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { BorderBox8 } from '@kjgl77/datav-vue3';
+import { BorderBox10 } from '@kjgl77/datav-vue3';
 import videoItem from './videoItem.vue';
 import dot from './dot.vue';
 import imagePreview from './imagePreview.vue';
