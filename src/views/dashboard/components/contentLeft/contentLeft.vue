@@ -63,7 +63,7 @@
       </BorderBox11>
     </div>
 
-    <tableModal ref="tableModalRef" />
+    <tableModal ref="tableModalRef" title="实验室氧含量信息" />
   </div>
 </template>
 

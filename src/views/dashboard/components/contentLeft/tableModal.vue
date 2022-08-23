@@ -1,7 +1,7 @@
 <template>
   <el-dialog
     v-model="dialogTableVisible"
-    title="实验室氧含量信息"
+    :title="title"
     custom-class="cutom-table-dilog"
     :show-close="false"
     :modal="false"
@@ -24,7 +24,6 @@
             <div :style="{ background: scope.row.q3 > 10 ? 'red' : '' }">{{ scope.row.q3 }}</div>
           </template>
         </el-table-column>
-        <!-- <el-table-column prop="NH3" label="用气点4" align="center" /> -->
       </el-table>
     </BorderBox10>
   </el-dialog>
@@ -33,6 +32,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { BorderBox10 } from '@kjgl77/datav-vue3';
+
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+});
 
 const dialogTableVisible = ref(false);
 
