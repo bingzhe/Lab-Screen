@@ -1,9 +1,13 @@
 <template>
   <div>
     <div class="relative">
-      <img class="w100% h550px pt30px" src="../../../../assets/images/lab.png" />
+      <img class="w100% h550px pt30px" src="../../../../assets/images/lab1.jpg" />
 
-      <dot class="absolute top-150px left-160px cursor-pointer" @click="handleDotClick" />
+      <dot class="absolute top-210px left-475px cursor-pointer" @click="handleDotClick('3110')" />
+      <dot class="absolute top-400px left-490px cursor-pointer" @click="handleDotClick('3113')" />
+      <dot class="absolute top-340px left-385px cursor-pointer" @click="handleDotClick('3118')" />
+      <dot class="absolute top-190px left-270px cursor-pointer" @click="handleDotClick('3440')" />
+      <dot class="absolute top-150px left-230px cursor-pointer" @click="handleDotClick('3445')" />
     </div>
 
     <div class="flex pt30px pb30px">
@@ -37,8 +41,8 @@ import imagePreview from './imagePreview.vue';
 
 const imagePreviewRef = ref(null);
 
-const handleDotClick = () => {
-  (imagePreviewRef.value as any).open();
+const handleDotClick = (type: string) => {
+  (imagePreviewRef.value as any).open(type);
 };
 </script>
 
