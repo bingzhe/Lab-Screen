@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div class="h360px w100%">
+    <div class="h455px w100%">
       <div class="chartline-title-wrapper">
         <Decoration7><div class="title-text">气瓶间实时压力</div></Decoration7>
       </div>
       <div class="chartline-wrapper">
         <BorderBox13>
-          <ChartLine class="chartline h300px"></ChartLine>
+          <ChartLine class="chartline h400px"></ChartLine>
         </BorderBox13>
       </div>
     </div>
@@ -24,18 +24,18 @@
       </div>
     </div>
 
-    <div class="flex justify-end w100% pr40px pt20px">
+    <!-- <div class="flex justify-end w100% pr40px pt20px">
       <Decoration9 style="width: 130px; height: 130px">
         <div style="color: #a5ccf2; font-size: 28px">20℃</div>
       </Decoration9>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script lang="ts" setup>
 import { Decoration7, BorderBox13, Decoration9 } from '@kjgl77/datav-vue3';
 import ChartLine from './ChartLine';
-import ScrollTable from './ScrollTable.vue';
+// import ScrollTable from './ScrollTable.vue';
 import SwichList from './SwichList.vue';
 </script>
 
@@ -57,7 +57,7 @@ import SwichList from './SwichList.vue';
     }
   }
   .chartline-wrapper {
-    height: 300px;
+    height: 380px;
     width: 100%;
   }
 
