@@ -73,7 +73,7 @@ onMounted(() => {
       height: 90%;
       padding: 10px;
       .lab-wrapper {
-        width: 8%;
+        width: 6%;
         padding: 30px 0 0 35px;
 
         .lab-item {
@@ -93,13 +93,13 @@ onMounted(() => {
         }
       }
       .contentLeft {
-        width: 26%;
+        width: 27%;
       }
       .contentCenter {
         width: 40%;
       }
       .contentRight {
-        width: 26%;
+        width: 27%;
       }
     }
   }
