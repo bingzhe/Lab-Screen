@@ -14,6 +14,7 @@ import p3113pic from '@/assets/images/3113.jpg';
 import p3118pic from '@/assets/images/3118.jpg';
 import p3440pic from '@/assets/images/3440.jpg';
 import p3445pic from '@/assets/images/3445.jpg';
+import lab2pic from '@/assets/images/lab2.jpg';
 
 const dialogTableVisible = ref(false);
 const img = ref('');
@@ -31,6 +32,8 @@ function open(type: string) {
     img.value = p3440pic;
   } else if (type === '3445') {
     img.value = p3445pic;
+  } else if (type === 'lab2') {
+    img.value = lab2pic;
   }
 }
 

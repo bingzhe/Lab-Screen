@@ -4,14 +4,12 @@
       <HeaderTab />
       <div class="content">
         <div class="lab-wrapper">
-          <div class="lab-item active">实验室一</div>
-          <div class="lab-item">实验室二</div>
-          <div class="lab-item">实验室三</div>
-          <div class="lab-item">实验室四</div>
-          <div class="lab-item">实验室五</div>
-          <div class="lab-item">实验室六</div>
-          <div class="lab-item">实验室七</div>
-          <div class="lab-item">实验室八</div>
+          <div class="lab-item active">首页</div>
+          <div class="lab-item">3110</div>
+          <div class="lab-item">3113</div>
+          <div class="lab-item">3118</div>
+          <div class="lab-item">3440</div>
+          <div class="lab-item">3445</div>
         </div>
         <ContentLeft class="contentLeft"></ContentLeft>
         <ContentCenter class="contentCenter"></ContentCenter>
@@ -35,6 +33,19 @@ onMounted(() => {
   // todo 屏幕适应
   windowDraw();
   calcRate();
+
+  // console.log(appRef.value);
+  // if (appRef.value.requestFullscreen) {
+  //   appRef.value.requestFullscreen();
+  // } else if (appRef.value.webkitRequestFullscreen) {
+  //   appRef.value.webkitRequestFullscreen();
+  // } else if (appRef.value.mozRequestFullScreen) {
+  //   appRef.value.mozRequestFullScreen();
+  // } else if (appRef.value.msRequestFullscreen) {
+  //   appRef.value.msRequestFullscreen();
+  // }
+
+  // appRef.value.requestFullscreen();
 });
 </script>
 

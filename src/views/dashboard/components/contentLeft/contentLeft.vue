@@ -3,7 +3,11 @@
     <div class="h250px pl20px pr20px">
       <BorderBox11 title="氧含量信息">
         <el-carousel trigger="click" height="250px" :interval="5000">
-          <el-carousel-item v-for="item in 3" :key="item">
+          <el-carousel-item v-for="item in 4" :key="item">
+            <span class="lab-name">3110</span>
+            <span class="lab-name">3118</span>
+            <span class="lab-name">3445</span>
+            <span class="lab-name">3440</span>
             <div class="box-content flex justify-between items-center p40px pt80px w100% h100%">
               <WaterLevelPond
                 v-if="showWaterLevelPond"
@@ -33,7 +37,7 @@
     </div>
 
     <div class="h350px pl20px pr20px">
-      <BorderBox11 title="用气点实时压力">
+      <BorderBox11 title="用气点实时压力Bar">
         <el-carousel trigger="click" height="340px" :interval="5000">
           <el-carousel-item>
             <div class="p40px pt60px pb60px">
@@ -120,6 +124,25 @@ onMounted(() => {
   position: relative;
   right: 20px;
   bottom: 45px;
+}
+
+.lab-name {
+  position: absolute;
+  color: #a5ccf2;
+  font-size: 16px;
+  top: 90px;
+  &:first-child {
+    left: 60px;
+  }
+  &:nth-child(2) {
+    left: 160px;
+  }
+  &:nth-child(3) {
+    left: 250px;
+  }
+  &:nth-child(4) {
+    left: 345px;
+  }
 }
 // test
 </style>

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="h455px w100%">
       <div class="chartline-title-wrapper">
-        <Decoration7><div class="title-text">气瓶间实时压力</div></Decoration7>
+        <Decoration7><div class="title-text">气瓶间实时压力Bar</div></Decoration7>
       </div>
       <div class="chartline-wrapper">
         <BorderBox13>

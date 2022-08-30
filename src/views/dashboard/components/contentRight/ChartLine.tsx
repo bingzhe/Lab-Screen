@@ -22,9 +22,17 @@ const ChartLine = defineComponent({
         containLabel: true,
       },
       xAxis: [
+        // {
+        //   type: 'category',
+        //   data: ['PCO2', 'N2', 'Ar', 'N2', 'NH3', 'Ar', 'Ar MIX', 'PAr', 'Ar'],
+        //   axisLine: {
+        //     lineStyle: {
+        //       color: '#a5ccf2',
+        //     },
+        //   },
+        // },
         {
-          type: 'category',
-          data: ['N2', 'AR', 'CO2', 'H2', 'NH3', 'C12', 'NH3', 'C12'],
+          type: 'value',
           axisLine: {
             lineStyle: {
               color: '#a5ccf2',
@@ -33,8 +41,27 @@ const ChartLine = defineComponent({
         },
       ],
       yAxis: [
+        // {
+        //   type: 'value',
+        //   axisLine: {
+        //     lineStyle: {
+        //       color: '#a5ccf2',
+        //     },
+        //   },
+        // },
         {
-          type: 'value',
+          type: 'category',
+          data: [
+            '3445 PCO2',
+            '3440/3445 N2',
+            '3440/3445 Ar',
+            '3110/3113 N2',
+            '3440 NH3',
+            '3110/3118/3113 Ar',
+            '3113 Ar MIX',
+            '3113 PAr',
+            '3113 Ar',
+          ],
           axisLine: {
             lineStyle: {
               color: '#a5ccf2',
@@ -52,7 +79,7 @@ const ChartLine = defineComponent({
               color: '#fff',
             },
           },
-          data: [800, 1200, 900, 300, 800, 200, 300, 400],
+          data: [800, 1200, 900, 300, 800, 200, 300, 400, 600, 200],
         },
       ],
     };

@@ -32,12 +32,12 @@ const prop = defineProps({
 const emits = defineEmits(['more-click']);
 
 const tableData = [
-  { type: 'N2', q1: '1', q2: '13', q3: '2' },
-  { type: 'AR', q1: '3', q2: '2', q3: '1' },
-  { type: 'CO2', q1: '4', q2: '2', q3: '15' },
-  { type: 'H2', q1: '5', q2: '3', q3: '3' },
-  { type: 'NH3', q1: '2', q2: '4', q3: '4' },
-  { type: 'C12', q1: '12', q2: '5', q3: '5' },
+  { type: 'PCO2', q1: '1', q2: '13', q3: '2' },
+  { type: 'N2', q1: '3', q2: '2', q3: '1' },
+  { type: 'Ar', q1: '4', q2: '2', q3: '15' },
+  { type: 'NH3', q1: '5', q2: '3', q3: '3' },
+  { type: 'Ar MIX', q1: '2', q2: '4', q3: '4' },
+  { type: 'PAr', q1: '12', q2: '5', q3: '5' },
 ];
 
 const mouseoverHandler = (e: any) => {
