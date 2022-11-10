@@ -2,7 +2,7 @@ import service from '@/api/http';
 
 const dashboardApi = {
   // 验证登录实例
-  homeDataApi: () => service.get(`/webapi/device/16552595723210menci0001008000012f/detail`),
+  homeDataApi: () => service.get(`/webapi/device/166809176018402862a9ff22f0000012e/detail`),
 };
 
 export default dashboardApi;
