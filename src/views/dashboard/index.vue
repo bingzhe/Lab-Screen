@@ -25,6 +25,7 @@ import HeaderTab from './components/headerTab/headerTab';
 import ContentLeft from './components/contentLeft/contentLeft.vue';
 import ContentRight from './components/contentRight/contentRight.vue';
 import ContentCenter from './components/contentCenter/contentCenter.vue';
+import dashboardApi from '@/api/modules/dashboard';
 
 // * 适配处理
 const { appRef, calcRate, windowDraw } = useIndex();
@@ -46,6 +47,10 @@ onMounted(() => {
   // }
 
   // appRef.value.requestFullscreen();
+
+  const resp = dashboardApi.homeDataApi();
+
+  console.log('resp', resp);
 });
 </script>
 

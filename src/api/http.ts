@@ -14,6 +14,7 @@ const axiosInstance: AxiosInstance = axios.create({
   // 请求头
   headers: {
     'Content-Type': 'application/json',
+    token: 'a9b50324-10e6-4b87-b508-2fe3bc39c02b',
   },
 });
 
